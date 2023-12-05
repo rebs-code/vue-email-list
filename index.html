@@ -7,20 +7,26 @@
     <!-- my css -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- axios cdn -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <div id="app">
+    <div id="app" v-cloak>
       <div class="main-container">
         <h1>Email Generator</h1>
         <div class="container">
           <div>
             <h2>Your Randomly Generated Email Addresses:</h2>
           </div>
+          <button @click="getEmail">Get Emails</button>
+          <ul>
+            <li v-for="email in emails">{{ email }}</li>
+          </ul>
         </div>
       </div>
     </div>
     <!-- vue cdn -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- my js -->
+    <script src="js/main.js"></script>
   </body>
 </html>
