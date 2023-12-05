@@ -24,6 +24,7 @@ createApp({
         );
       }
       Promise.all(emailPromise).then((results) => {
+        //results is an array of all the responses (emails)
         this.emails = results;
       });
     },
