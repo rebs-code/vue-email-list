@@ -17,6 +17,7 @@ body {
 .main-container {
   width: 100%;
   max-width: 1200px;
+  height: calc(100vh - 40px);
   margin: 20px auto;
   padding: 0 20px;
   background-color: white;
