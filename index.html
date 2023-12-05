@@ -12,15 +12,21 @@
   <body>
     <div id="app" v-cloak>
       <div class="main-container">
-        <h1>Email Generator</h1>
         <div class="container">
-          <div>
-            <h2>Your Randomly Generated Email Addresses:</h2>
+          <div class="title">
+            <h1>Email Generator</h1>
           </div>
-          <button @click="getEmail">Get Emails</button>
-          <ul>
-            <li v-for="email in emails">{{ email }}</li>
-          </ul>
+          <div class="bottom-container">
+            <div class="button-container">
+              <button @click="getEmail">Get Emails</button>
+            </div>
+            <h2>Your Randomly Generated Email Addresses:</h2>
+            <div class="email-container">
+              <ol>
+                <li v-for="email in emails" class="email">{{ email }}</li>
+              </ol>
+            </div>
+          </div>
         </div>
       </div>
     </div>
